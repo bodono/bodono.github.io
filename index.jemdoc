@@ -31,6 +31,9 @@ Contact: [bodonoghue85@gmail.com email], [https://twitter.com/bodonoghue85 twitt
 - [https://www.cvxgrp.org/scs/ SCS]: Large-scale convex quadratic cone solver.
 
 == Journal Articles
+:{[https://arxiv.org/abs/2501.07018 PDLP: A practical first-order method for large-scale linear programming]} D. Applegate, M. Díaz, O. Hinder, H. Lu, M. Lubin, B. O'Donoghue, and W. Schudy \n
+/Mathematical Programming Computation (MPC)/, 2026.
+
 :{[https://arxiv.org/abs/2212.14530 POMRL: No-regret learning-to-plan with increasing horizons]} K. Khetarpal, C. Vernade, B. O'Donoghue, S. Singh, and T. Zahavy \n
 /Transactions on Machine Learning Research (TMLR)/, 2023.
 
@@ -133,6 +136,9 @@ Contact: [bodonoghue85@gmail.com email], [https://twitter.com/bodonoghue85 twitt
 /Proceedings IEEE Multi-Conference on Systems and Control/, pp. 424-431, September 2011.
 
 == Other
+:{[https://arxiv.org/abs/2507.06261 Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next generation agentic capabilities]} Gemini Team \n
+Tech report, 2025.
+
 :{[https://arxiv.org/abs/2210.12160 On the connection between Bregman divergence and value in regularized Markov decision processes]} B. O'Donoghue \n
 Technical note, 2022.
 
