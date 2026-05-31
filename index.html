@@ -1,280 +1,305 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="css/jemdoc.css" type="text/css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Brendan O'Donoghue</title>
+<meta name="description" content="Brendan O'Donoghue — Director of Research at Google DeepMind. Generative AI, large language models, diffusion, reinforcement learning, and convex optimization. Creator of the SCS solver." />
+<meta name="author" content="Brendan O'Donoghue" />
+<meta property="og:title" content="Brendan O'Donoghue" />
+<meta property="og:description" content="Director of Research at Google DeepMind — generative AI, reinforcement learning, and convex optimization." />
+<meta property="og:type" content="profile" />
+<meta property="og:image" content="profile.jpeg" />
+<link rel="icon" href="profile.jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script>
+  // Apply saved/system theme before paint to avoid flash.
+  (function () {
+    var saved = localStorage.getItem("theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
 </head>
 <body>
-<div id="layout-content">
-<div id="toptitle">
-<h1>Brendan O'Donoghue</h1>
+
+<!-- ============================== Nav ============================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">Brendan O'Donoghue</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#software">Software</a></li>
+      <li><a href="#publications">Publications</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<a id="top"></a>
+<div class="container">
+
+  <!-- ============================== Hero ============================== -->
+  <header class="hero">
+    <img class="hero-photo" src="profile.jpeg" alt="Brendan O'Donoghue" />
+    <div>
+      <h1>Brendan O'Donoghue</h1>
+      <p class="role">Director of Research, Google DeepMind</p>
+      <p class="affil">Ph.D., Stanford University &middot; London, UK</p>
+      <div class="socials">
+        <a href="mailto:bodonoghue85@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          Email
+        </a>
+        <a href="https://scholar.google.com/citations?user=0Pzjj-cAAAAJ">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://github.com/bodono">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2 0 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a href="https://twitter.com/bodonoghue85">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+          Twitter
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================== About ============================== -->
+  <section id="about">
+    <div class="bio">
+      <p>
+        I lead a research team at
+        <a href="https://deepmind.google/">Google DeepMind</a> in London, where I've
+        worked since 2015. My research sits at the intersection of generative AI,
+        reinforcement learning, and optimization. Lately I've been focused on diffusion
+        models for language, and I lead the team behind Google's experimental
+        <a href="https://blog.google/technology/google-deepmind/gemini-diffusion">Gemini Diffusion</a>
+        model, which I spoke about in
+        <a href="https://venturebeat.com/ai/beyond-gpt-architecture-why-googles-diffusion-approach-could-reshape-llm-deployment">this interview</a>.
+        Previously I worked on reinforcement learning, especially Bayesian
+        approaches to the exploration/exploitation trade-off, which resulted in algorithms
+        like <a href="https://arxiv.org/abs/1807.09647">K-learning</a> and the
+        <a href="https://arxiv.org/abs/1709.05380">Uncertainty Bellman Equation</a>.
+      </p>
+      <p>
+        Outside DeepMind I'm probably best known for my work in optimization, particularly
+        <a href="https://www.cvxgrp.org/scs/">SCS</a>, the Splitting Conic Solver&mdash;an
+        open-source solver for large-scale convex optimization that I wrote and still
+        maintain, which gets downloaded a few million times a month.
+      </p>
+      <p>
+        Before DeepMind I led a machine learning team at
+        <a href="https://www.quantcast.com/">Quantcast</a> in San Francisco and London,
+        working on large-scale ad targeting and real-time bidding. I did my Ph.D. at
+        <a href="https://www.stanford.edu/">Stanford University</a> with
+        <a href="http://www.stanford.edu/~boyd/">Stephen Boyd</a>, on designing control
+        policies via convex optimization. Before that, I read information and computer
+        engineering at <a href="https://www.cam.ac.uk/">Cambridge</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================== Education ============================== -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Stanford University</h3>
+        <p class="meta">2007 &ndash; 2013 &middot; Stanford, CA</p>
+        <p class="deg">M.S. &amp; Ph.D., Electrical Engineering</p>
+        <p>Advisor: Prof. Stephen Boyd</p>
+        <p>Thesis: <a href="thesis/bod_thesis.pdf"><em>Suboptimal Control Policies via Convex Optimization</em></a>, 2013</p>
+      </div>
+      <div class="card">
+        <h3>Gonville &amp; Caius College, Cambridge</h3>
+        <p class="meta">2003 &ndash; 2007 &middot; Cambridge, UK</p>
+        <p class="deg">B.A., M.A. (1st Class Hons.), M.Eng. (Distinction)</p>
+        <p>Computer &amp; Information Engineering</p>
+        <p>Cambridge&ndash;MIT Exchange Fellow, 2005/2006</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== Awards ============================== -->
+  <section id="awards">
+    <h2>Awards</h2>
+    <ul class="award-list">
+      <li><span class="year">2024</span><span>Beale&ndash;Orchard-Hays Prize for Excellence in Computational Mathematical Programming</span></li>
+      <li><span class="year">2016</span><span>IEEE SPS Young Author Best Paper Award</span></li>
+      <li><span class="year">2007&ndash;12</span><span>Fulbright Scholarship</span></li>
+      <li><span class="year">2007</span><span>Harbourne Tankard for Academic and Athletic Excellence, Gonville &amp; Caius College, Cambridge</span></li>
+    </ul>
+  </section>
+
+  <!-- ============================== Software ============================== -->
+  <section id="software">
+    <h2>Software</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3><a href="https://www.cvxgrp.org/scs/">SCS</a> &mdash; Splitting Conic Solver</h3>
+      </div>
+      <p class="org">Author &amp; primary maintainer</p>
+      <ul>
+        <li>Free, open-source numerical package for solving large-scale convex cone problems &mdash; LP, QP, SOCP, SDP, and more.</li>
+        <li>Written in C with Python, MATLAB, Julia, and R interfaces.</li>
+        <li>Downloaded almost 3 million times a month; in widespread use across academia and industry.</li>
+      </ul>
+    </div>
+    <p class="software-lead" style="margin-top:26px">Other open-source numerical linear algebra, optimization, and control libraries:</p>
+    <div class="repo-grid">
+      <a class="repo-card" href="https://github.com/google-deepmind/qtqp">
+        <span class="repo-name">QTQP</span>
+        <span class="repo-desc">&ldquo;Cutie QP&rdquo;&mdash;a quadratic programming solver</span>
+      </a>
+      <a class="repo-card" href="https://github.com/google-research/FirstOrderLp.jl">
+        <span class="repo-name">FirstOrderLp.jl</span>
+        <span class="repo-desc">First-order methods for large-scale linear programming, in Julia</span>
+      </a>
+      <a class="repo-card" href="https://github.com/cvxgrp/aa">
+        <span class="repo-name">AA</span>
+        <span class="repo-desc">Type-I and type-II Anderson acceleration for fixed-point iterations</span>
+      </a>
+      <a class="repo-card" href="https://github.com/bodono/apg">
+        <span class="repo-name">apg</span>
+        <span class="repo-desc">Accelerated proximal gradient solver with adaptive restart</span>
+      </a>
+      <a class="repo-card" href="https://github.com/bodono/apgpy">
+        <span class="repo-name">apgpy</span>
+        <span class="repo-desc">Accelerated proximal gradient method, in Python</span>
+      </a>
+      <a class="repo-card" href="https://github.com/cvxgrp/osc">
+        <span class="repo-name">osc</span>
+        <span class="repo-desc">Operator splitting for control</span>
+      </a>
+      <a class="repo-card" href="https://github.com/bodono/py-mkl-pardiso">
+        <span class="repo-name">py-mkl-pardiso</span>
+        <span class="repo-desc">Python bindings for Intel MKL's PARDISO sparse linear solver</span>
+      </a>
+      <a class="repo-card" href="https://github.com/bodono/macldlt">
+        <span class="repo-name">macldlt</span>
+        <span class="repo-desc">Python bindings for the Apple Accelerate LDL&#7488; factorization</span>
+      </a>
+      <a class="repo-card" href="https://github.com/bodono/scs-python">
+        <span class="repo-name">scs-python</span>
+        <span class="repo-desc">Python interface to the SCS solver</span>
+      </a>
+      <a class="repo-card" href="https://github.com/bodono/scs-matlab">
+        <span class="repo-name">scs-matlab</span>
+        <span class="repo-desc">MATLAB interface to the SCS solver</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================== Publications ============================== -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <!-- Journal -->
+    <div class="pub-group">
+      <h3>Journal Articles <span class="count">13</span></h3>
+      <ul class="pub-list">
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2501.07018">PDLP: A practical first-order method for large-scale linear programming</a><div class="authors">D. Applegate, M. Díaz, O. Hinder, H. Lu, M. Lubin, <span class="me">B. O'Donoghue</span>, and W. Schudy</div><div class="venue">Mathematical Programming Computation (MPC), 2026</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2212.14530">POMRL: No-regret learning-to-plan with increasing horizons</a><div class="authors">K. Khetarpal, C. Vernade, <span class="me">B. O'Donoghue</span>, S. Singh, and T. Zahavy</div><div class="venue">Transactions on Machine Learning Research (TMLR), 2023</div></li>
+        <li class="pub"><a class="title" href="publications/quad_scs.pdf">Operator splitting for a homogeneous embedding of the monotone linear complementarity problem</a><div class="authors"><span class="me">B. O'Donoghue</span></div><div class="venue">SIAM Journal on Optimization, 31(3), pp. 1999&ndash;2023, August 2021</div></li>
+        <li class="pub"><a class="title" href="http://www.stanford.edu/~boyd/papers/nonexp_global_aa1.html">Globally convergent type-I Anderson acceleration for non-smooth fixed-point iterations</a><div class="authors">J. Zhang, <span class="me">B. O'Donoghue</span>, and S. Boyd</div><div class="venue">SIAM Journal on Optimization, 30(4), pp. 3170&ndash;3197, November 2020</div></li>
+        <li class="pub"><a class="title" href="https://rdcu.be/4sNU">Clinically applicable deep learning for diagnosis and referral in retinal disease</a><div class="authors">J. De Fauw, et al.</div><div class="venue">Nature Medicine, 24(9), pp. 1342&ndash;1350, August 2018</div></li>
+        <li class="pub"><a class="title" href="http://www.stanford.edu/~boyd/papers/scs.html">Conic optimization via operator splitting and homogeneous self-dual embedding</a><div class="authors"><span class="me">B. O'Donoghue</span>, E. Chu, N. Parikh, and S. Boyd</div><div class="venue">Journal of Optimization Theory and Applications, 169(3), pp. 1042&ndash;1068, June 2016</div></li>
+        <li class="pub"><a class="title" href="publications/wireless.pdf">Large-scale convex optimization for dense wireless cooperative networks</a><span class="badge award">Best Paper</span><div class="authors">Y. Shi, J. Zhang, <span class="me">B. O'Donoghue</span>, and K. Letaief</div><div class="venue">IEEE Transactions on Signal Processing, 63(18), pp. 4729&ndash;4743, September 2015</div></li>
+        <li class="pub"><a class="title" href="http://www.stanford.edu/~boyd/papers/adp_iter_bellman.html">Approximate dynamic programming via iterated Bellman inequalities</a><div class="authors">Y. Wang, <span class="me">B. O'Donoghue</span>, and S. Boyd</div><div class="venue">International Journal of Robust and Nonlinear Control, 25(10), pp. 1472&ndash;1496, July 2015</div></li>
+        <li class="pub"><a class="title" href="publications/adap_restart.pdf">Adaptive restart for accelerated gradient schemes</a><div class="authors"><span class="me">B. O'Donoghue</span> and E. J. Candès</div><div class="venue">Foundations of Computational Mathematics, 15(3), pp. 715&ndash;732, June 2015</div></li>
+        <li class="pub"><a class="title" href="https://scholarship.rice.edu/bitstream/handle/1911/94752/Optimization-Methods.pdf?sequence=4">Fast alternating direction optimization methods</a><div class="authors">T. Goldstein, <span class="me">B. O'Donoghue</span>, S. Setzer, and R. Baraniuk</div><div class="venue">SIAM Journal on Imaging Sciences, 7(3), pp. 1588&ndash;1623, August 2014</div></li>
+        <li class="pub"><a class="title" href="publications/oplc.pdf">A spread-return mean-reverting model for credit spread dynamics</a><div class="authors"><span class="me">B. O'Donoghue</span>, M. Peacock, J. Lee, and L. Capriotti</div><div class="venue">International Journal of Theoretical and Applied Finance, 17(3), pp. 1&ndash;14, May 2014</div></li>
+        <li class="pub"><a class="title" href="http://www.stanford.edu/~boyd/papers/port_opt_bound.html">Performance bounds and suboptimal policies for multi-period investment</a><div class="authors">S. Boyd, M. Mueller, <span class="me">B. O'Donoghue</span>, and Y. Wang</div><div class="venue">Foundations and Trends in Optimization, 1(1), pp. 1&ndash;69, January 2014</div></li>
+        <li class="pub"><a class="title" href="http://www.stanford.edu/~boyd/papers/oper_splt_ctrl.html">A splitting method for optimal control</a><div class="authors"><span class="me">B. O'Donoghue</span>, G. Stathopoulos, and S. Boyd</div><div class="venue">IEEE Transactions on Control Systems Technology, 21(6), pp. 2432&ndash;2442, November 2013</div></li>
+      </ul>
+    </div>
+
+    <!-- Conference -->
+    <div class="pub-group">
+      <h3>Conference Articles <span class="count">21</span></h3>
+      <ul class="pub-list">
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2311.13294">Probabilistic inference in reinforcement learning done right</a><div class="authors">J. Tarbouriech, T. Lattimore, and <span class="me">B. O'Donoghue</span></div><div class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2023</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2301.03236">Optimistic meta-gradients</a><div class="authors">S. Flennerhag, T. Zahavy, <span class="me">B. O'Donoghue</span>, H. van Hasselt, A. György, and S. Singh</div><div class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2023</div></li>
+        <li class="pub"><a class="title" href="http://arxiv.org/abs/2302.09339">Efficient exploration via epistemic-risk-seeking policy optimization</a><div class="authors"><span class="me">B. O'Donoghue</span></div><div class="venue">Proceedings of the International Conference on Machine Learning (ICML), 2023</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2302.01275">ReLOAD: Reinforcement learning with optimistic ascent-descent for last-iterate convergence in constrained MDPs</a><div class="authors">T. Moskovitz, <span class="me">B. O'Donoghue</span>, V. Veeriah, S. Flennerhag, S. Singh, and T. Zahavy</div><div class="venue">Proceedings of the International Conference on Machine Learning (ICML), 2023</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2110.04629">The neural testbed: Evaluating joint predictions</a><div class="authors">I. Osband, Z. Wen, S. Asghari, V. Dwaracherla, B. Hao, M. Ibrahimi, D. Lawson, X. Lu, <span class="me">B. O'Donoghue</span>, and B. Van Roy</div><div class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2022</div></li>
+        <li class="pub"><a class="title" href="http://arxiv.org/abs/2110.15688">Variational Bayesian optimistic sampling</a><span class="badge">Spotlight</span><div class="authors"><span class="me">B. O'Donoghue</span> and T. Lattimore</div><div class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2021</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/pdf/2106.00661.pdf">Reward is enough for convex MDPs</a><span class="badge">Spotlight</span><div class="authors">T. Zahavy, <span class="me">B. O'Donoghue</span>, G. Desjardins, and S. Singh</div><div class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2021</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/1807.09647">Variational Bayesian reinforcement learning with regret bounds</a><div class="authors"><span class="me">B. O'Donoghue</span></div><div class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2021</div></li>
+        <li class="pub"><a class="title" href="http://www.optimization-online.org/DB_HTML/2021/06/8439.html">Practical large-scale linear programming using primal-dual hybrid gradient</a><div class="authors">D. Applegate, M. Díaz, O. Hinder, H. Lu, M. Lubin, <span class="me">B. O'Donoghue</span>, and W. Schudy</div><div class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2021</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2006.05145">Matrix games with bandit feedback</a><div class="authors"><span class="me">B. O'Donoghue</span>, T. Lattimore, and I. Osband</div><div class="venue">Proceedings of the 37th Conference on Uncertainty in Artificial Intelligence (UAI), 2021</div></li>
+        <li class="pub"><a class="title" href="https://openreview.net/forum?id=PUkhWz65dy5">Discovering a set of policies for the worst case reward</a><span class="badge">Spotlight</span><div class="authors">T. Zahavy, A. Barreto, D. Mankowitz, S. Hou, <span class="me">B. O'Donoghue</span>, I. Kemaev, and S. Singh</div><div class="venue">Proceedings of the International Conference on Learning Representations (ICLR), 2021</div></li>
+        <li class="pub"><a class="title" href="https://web.stanford.edu/~boyd/papers/conv_reinforce.html">Sample-efficient reinforcement learning with REINFORCE</a><div class="authors">J. Zhang, J. Kim, <span class="me">B. O'Donoghue</span>, and S. Boyd</div><div class="venue">Proceedings of the AAAI Conference on Artificial Intelligence, 35(12), 10887&ndash;10895, 2021</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2001.00805">Making sense of reinforcement learning and probabilistic inference</a><span class="badge">Spotlight</span><div class="authors"><span class="me">B. O'Donoghue</span>, I. Osband, and C. Ionescu</div><div class="venue">Proceedings of the International Conference on Learning Representations (ICLR), 2020</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/1906.02608">Hamiltonian descent for composite objectives</a><div class="authors"><span class="me">B. O'Donoghue</span> and C. J. Maddison</div><div class="venue">Advances in Neural Information Processing Systems (NeurIPS), 2019</div></li>
+        <li class="pub"><a class="title" href="https://debug-ml-iclr2019.github.io/cameraready/DebugML-19_paper_6.pdf">Visualizations of decision regions in the presence of adversarial examples</a><div class="authors">G. Swirszcz, <span class="me">B. O'Donoghue</span>, and P. Kohli</div><div class="venue">Debugging Machine Learning Models Workshop, ICLR, 2019</div></li>
+        <li class="pub"><a class="title" href="https://openreview.net/pdf?id=HyeFAsRctQ">Verification of non-linear specifications for neural networks</a><div class="authors">C. Qin, K. (Dj) Dvijotham, <span class="me">B. O'Donoghue</span>, R. Bunel, R. Stanforth, S. Gowal, J. Uesato, G. Swirszcz, and P. Kohli</div><div class="venue">Proceedings of the International Conference on Learning Representations (ICLR), 2019</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/1802.05666">Adversarial risk and the dangers of evaluating against weak attacks</a><div class="authors">J. Uesato, <span class="me">B. O'Donoghue</span>, A. van den Oord, and P. Kohli</div><div class="venue">Proceedings of the International Conference on Machine Learning (ICML), pp. 5025&ndash;5034, 2018</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/1709.05380">The uncertainty Bellman equation and exploration</a><span class="badge">Oral</span><div class="authors"><span class="me">B. O'Donoghue</span>, I. Osband, R. Munos, and V. Mnih</div><div class="venue">Proceedings of the International Conference on Machine Learning (ICML), pp. 3836&ndash;3845, 2018</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/1611.01626">Combining policy gradient and Q-learning</a><div class="authors"><span class="me">B. O'Donoghue</span>, R. Munos, K. Kavukcuoglu, and V. Mnih</div><div class="venue">Proceedings of the International Conference on Learning Representations (ICLR), 2017</div></li>
+        <li class="pub"><a class="title" href="http://www.stanford.edu/~boyd/papers/it_avf.html">Iterated approximate value functions</a><div class="authors"><span class="me">B. O'Donoghue</span>, Y. Wang, and S. Boyd</div><div class="venue">Proceedings of the European Control Conference, pp. 3882&ndash;3888, Zurich, July 2013</div></li>
+        <li class="pub"><a class="title" href="http://www.stanford.edu/~boyd/papers/min_max_adp.html">Min-max approximate dynamic programming</a><div class="authors"><span class="me">B. O'Donoghue</span>, Y. Wang, and S. Boyd</div><div class="venue">Proceedings of the IEEE Multi-Conference on Systems and Control, pp. 424&ndash;431, September 2011</div></li>
+      </ul>
+    </div>
+
+    <!-- Other -->
+    <div class="pub-group">
+      <h3>Other <span class="count">8</span></h3>
+      <ul class="pub-list">
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2507.06261">Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next-generation agentic capabilities</a><div class="authors">Gemini Team</div><div class="venue">Tech report, 2025</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2210.12160">On the connection between Bregman divergence and value in regularized Markov decision processes</a><div class="authors"><span class="me">B. O'Donoghue</span></div><div class="venue">Technical note, 2022</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/2012.13349">Solving mixed integer programs using neural networks</a><div class="authors">V. Nair*, S. Bartunov*, F. Gimeno*, I. von Glehn*, P. Lichocki*, I. Lobov*, <span class="me">B. O'Donoghue</span>*, N. Sonnerat*, C. Tjandraatmadja*, P. Wang*, et al. (*equal contribution)</div><div class="venue">In submission, 2021</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/pdf/2106.00669.pdf">Discovering diverse nearly optimal policies with successor features</a><div class="authors">T. Zahavy, <span class="me">B. O'Donoghue</span>, A. Barreto, V. Mnih, S. Flennerhag, and S. Singh</div><div class="venue">Working draft, 2021</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/1811.09300">Strength in numbers: Trading-off robustness and computation via adversarially-trained ensembles</a><div class="authors">E. Grefenstette, R. Stanforth, <span class="me">B. O'Donoghue</span>, J. Uesato, G. Swirszcz, and P. Kohli</div><div class="venue">Working draft, 2018</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/1809.05042">Hamiltonian descent methods</a><div class="authors">C. J. Maddison, D. Paulin, Y. W. Teh, <span class="me">B. O'Donoghue</span>, and A. Doucet</div><div class="venue">Working draft, 2018</div></li>
+        <li class="pub"><a class="title" href="https://arxiv.org/abs/1805.10265">Training verified learners with learned verifiers</a><div class="authors">K. (Dj) Dvijotham, S. Gowal, R. Stanforth, R. Arandjelovic, <span class="me">B. O'Donoghue</span>, J. Uesato, and P. Kohli</div><div class="venue">Working draft, 2018</div></li>
+        <li class="pub"><a class="title" href="http://www.stanford.edu/~boyd/papers/pdos.html">A primal-dual operator splitting method for conic optimization</a><div class="authors">E. Chu, <span class="me">B. O'Donoghue</span>, N. Parikh, and S. Boyd</div><div class="venue">Stanford internal report, 2013</div></li>
+      </ul>
+    </div>
+
+    <!-- Thesis -->
+    <div class="pub-group">
+      <h3>Ph.D. Thesis</h3>
+      <ul class="pub-list">
+        <li class="pub"><a class="title" href="thesis/bod_thesis.pdf">Suboptimal control policies via convex optimization</a><div class="authors"><span class="me">B. O'Donoghue</span></div><div class="venue">Stanford University, 2013</div></li>
+      </ul>
+    </div>
+  </section>
+
 </div>
-<table class="imgtable"><tr><td>
-<img src="profile.jpeg" alt="Brendan O'Donoghue" width="350px" height="350px" />&nbsp;</td>
-<td align="left"><p>Brendan O'Donoghue, Ph.D. <br />
-Research Scientist at <a href="http://deepmind.com/">DeepMind</a> <br />
-Former advisor: <a href="http://www.stanford.edu/~boyd/">Professor Stephen Boyd</a> <br />
-<a href="https://scholar.google.com/citations?user=0Pzjj-cAAAAJ">Google scholar profile</a> <br />
-<br />
-Contact: <a href="mailto:bodonoghue85@gmail.com">email</a>, <a href="https://twitter.com/bodonoghue85">twitter</a>, <a href="https://github.com/bodono">github</a></p>
-</td></tr></table>
-<h2>Education</h2>
-<ul>
-<li><p>Ph.D., M.S., Computer Science, <br />
-<a href="http://www.stanford.edu">Stanford University</a>,
-January 2013 <br /></p>
-</li>
-<li><p>B.A., M.A., M.Eng., Information and Computer Engineering, <br />
-<a href="http://www.cai.cam.ac.uk/">Gonville and Caius College</a>, <br />
-<a href="http://www.cam.ac.uk/">Cambridge University</a>, June 2007</p>
-</li>
-</ul>
-<h2>Interests and current research</h2>
-<ul>
-<li><p>Artificial intelligence</p>
-</li>
-<li><p>Machine learning</p>
-</li>
-<li><p>Reinforcement learning</p>
-</li>
-<li><p>Dynamic systems and control</p>
-</li>
-<li><p>Convex optimization</p>
-</li>
-</ul>
-<h2>Software</h2>
-<ul>
-<li><p><a href="https://www.cvxgrp.org/scs/">SCS</a>: Large-scale convex quadratic cone solver.</p>
-</li>
-</ul>
-<h2>Journal Articles</h2>
-<dl>
-<dt><a href="https://arxiv.org/abs/2501.07018">PDLP: A practical first-order method for large-scale linear programming</a></dt>
-<dd><p>D. Applegate, M. Díaz, O. Hinder, H. Lu, M. Lubin, B. O'Donoghue, and W. Schudy <br />
-<i>Mathematical Programming Computation (MPC)</i>, 2026.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/2212.14530">POMRL: No-regret learning-to-plan with increasing horizons</a></dt>
-<dd><p>K. Khetarpal, C. Vernade, B. O'Donoghue, S. Singh, and T. Zahavy <br />
-<i>Transactions on Machine Learning Research (TMLR)</i>, 2023.</p></dd>
-</dl>
-<dl>
-<dt><a href="publications/quad_scs.pdf">Operator splitting for a homogeneous embedding of the monotone linear complementarity problem</a></dt>
-<dd><p>B. O'Donoghue <br />
-<i>SIAM Journal on Optimization</i>, 31(3), pp. 1999-2023, August 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.stanford.edu/~boyd/papers/nonexp_global_aa1.html">Globally convergent type-I Anderson acceleration for non-smooth fixed-point iterations</a></dt>
-<dd><p>J. Zhang, B. O'Donoghue, and S. Boyd <br />
-<i>SIAM Journal on Optimization</i>, 30(4), pp. 3170-3197, November 2020.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://rdcu.be/4sNU">Clinically applicable deep learning for diagnosis and referral in retinal disease</a></dt>
-<dd><p>J. De Fauw, <i>et al.</i> <br />
-<i>Nature Medicine</i>, 24(9), pp. 1342-1350, August 2018.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.stanford.edu/~boyd/papers/scs.html">Conic optimization via operator splitting and homogeneous self-dual embedding</a></dt>
-<dd><p>B. O'Donoghue, E. Chu, N. Parikh, and S. Boyd <br />
-<i>Journal of Optimization Theory and Applications</i>, 169(3), pp. 1042-1068, June 2016.</p></dd>
-</dl>
-<dl>
-<dt><a href="publications/wireless.pdf">Large-scale convex optimization for dense wireless cooperative networks</a></dt>
-<dd><p>Y. Shi, J. Zhang, B. O'Donoghue, and K. Letaief <br />
-<i>IEEE Transactions on Signal Processing</i>, 63(18), pp. 4729-4743, September 2015.<br />
-<b>IEEE 2016 SPS Young Author Best Paper Award</b>.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.stanford.edu/~boyd/papers/adp_iter_bellman.html">Approximate dynamic programming via iterated Bellman Inequalities</a></dt>
-<dd><p>Y. Wang, B. O'Donoghue, and S. Boyd <br />
-<i>International Journal of Robust and Nonlinear Control</i>, 25(10), pp. 1472-1496, July 2015.</p></dd>
-</dl>
-<dl>
-<dt><a href="publications/adap_restart.pdf">Adaptive restart for accelerated gradient schemes</a></dt>
-<dd><p>B. O'Donoghue and E. J. Candès <br />
-<i>Foundations of computational mathematics</i>, 15(3), pp. 715-732, June 2015.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://scholarship.rice.edu/bitstream/handle/1911/94752/Optimization-Methods.pdf?sequence=4">Fast alternating direction optimization methods</a></dt>
-<dd><p>T. Goldstein, B. O'Donoghue, S. Setzer, and R. Baraniuk <br />
-<i>SIAM Journal on Imaging Sciences</i>, 7(3), pp.1588-1623, August 2014.</p></dd>
-</dl>
-<dl>
-<dt><a href="publications/oplc.pdf">A spread-return mean-reverting model for credit spread dynamics</a></dt>
-<dd><p>B. O'Donoghue, M. Peacock, J. Lee, and L. Capriotti <br />
-<i>International Journal of Theoretical and Applied Finance</i>, 17(3), pp. 1-14, May 2014.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.stanford.edu/~boyd/papers/port_opt_bound.html">Performance bounds and suboptimal policies for multi-period investment</a></dt>
-<dd><p>S. Boyd, M. Mueller, B. O'Donoghue, and Y. Wang <br />
-<i>Foundations and Trends in Optimization</i>, 1(1), pp. 1-69, January 2014.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.stanford.edu/~boyd/papers/oper_splt_ctrl.html">A splitting method for optimal control</a></dt>
-<dd><p>B. O'Donoghue, G. Stathopoulos, and S. Boyd <br />
-<i>IEEE Transactions on Control Systems Technology</i>, 21(6), pp. 2432-2442, November 2013.</p></dd>
-</dl>
-<h2>Conference Articles</h2>
-<dl>
-<dt><a href="https://arxiv.org/abs/2311.13294">Probabilistic inference in reinforcement learning done right</a></dt>
-<dd><p>J. Tarbouriech, T. Lattimore, and B. O'Donoghue <br />
-<i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2023.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/2301.03236">Optimistic meta-gradients</a></dt>
-<dd><p>S. Flennerhag, T. Zahavy, B. O'Donoghue, H. van Hasselt, A. György, and S. Singh <br />
-<i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2023.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://arxiv.org/abs/2302.09339">Efficient exploration via epistemic-risk-seeking policy optimization</a></dt>
-<dd><p>B. O'Donoghue <br />
-<i>Proceedings of the International Conference on Machine Learning (ICML)</i>, 2023.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/2302.01275">ReLOAD: Reinforcement learning with optimistic ascent-descent for last-iterate convergence in constrained MDPs</a></dt>
-<dd><p>T. Moskovitz, B. O'Donoghue, V. Veeriah, S. Flennerhag, S. Singh, and T. Zahavy <br />
-<i>Proceedings of the International Conference on Machine Learning (ICML)</i>, 2023.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/2110.04629">The neural testbed: Evaluating joint predictions</a></dt>
-<dd><p>I. Osband, Z. Wen, S. Asghari, V. Dwaracherla, B. Hao, M. Ibrahimi, D. Lawson, X. Lu, B. O'Donoghue, and B. Van Roy <br />
-<i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2022.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://arxiv.org/abs/2110.15688">Variational Bayesian optimistic sampling</a></dt>
-<dd><p>B. O'Donoghue and T. Lattimore <br />
-<b>Spotlight</b> <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/pdf/2106.00661.pdf">Reward is enough for convex MDPs</a></dt>
-<dd><p>T. Zahavy, B. O'Donoghue, G. Desjardins, and S. Singh <br />
-<b>Spotlight</b> <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/1807.09647">Variational Bayesian reinforcement learning with regret bounds</a></dt>
-<dd><p>B. O'Donoghue <br />
-<i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.optimization-online.org/DB_HTML/2021/06/8439.html">Practical large-scale linear programming using primal-dual hybrid gradient</a></dt>
-<dd><p>D. Applegate, M. Díaz, O. Hinder, H. Lu, M. Lubin, B. O'Donoghue, and W. Schudy <br />
-<i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/2006.05145">Matrix games with bandit feedback</a></dt>
-<dd><p>B. O'Donoghue, T. Lattimore, and I. Osband <br />
-<i>Proceedings of the 37th Conference on Uncertainty in Artificial Intelligence</i>, (UAI), 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://openreview.net/forum?id=PUkhWz65dy5">Discovering a set of policies for the worst case reward</a></dt>
-<dd><p>T. Zahavy, A. Barreto, D. Mankowitz, S. Hou, B. O'Donoghue, I. Kemaev, and S. Singh <br />
-<b>Spotlight</b> <i>Proceedings of the International Conference on Learning Representations (ICLR)</i>, 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://web.stanford.edu/~boyd/papers/conv_reinforce.html">Sample Efficient Reinforcement Learning with REINFORCE</a></dt>
-<dd><p>J. Zhang, J. Kim, B. O'Donoghue, and S. Boyd <br />
-<i>Proceedings of the AAAI Conference on Artificial Intelligence</i>, 35(12), 10887-10895, 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/2001.00805">Making sense of reinforcement learning and probabilistic inference</a></dt>
-<dd><p>B. O'Donoghue, I Osband, and C. Ionescu <br />
-<b>Spotlight</b> <i>Proceedings of the International Conference on Learning Representations (ICLR)</i>, 2020.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/1906.02608">Hamiltonian descent for composite objectives</a></dt>
-<dd><p>B. O'Donoghue and C. J. Maddison <br />
-<i>Advances in Neural Information Processing Systems (NeurIPS)</i>, 2019.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://debug-ml-iclr2019.github.io/cameraready/DebugML-19_paper_6.pdf">Visualizations of decision regions in the presence of adversarial examples</a></dt>
-<dd><p>G. Swirszcz, B. O'Donoghue, and P. Kohli <br />
-<i>Debugging Machine Learning Models Workshop</i>, ICLR, 2019.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://openreview.net/pdf?id=HyeFAsRctQ">Verification of non-linear specifications for neural networks</a></dt>
-<dd><p>C. Qin, K. (Dj) Dvijotham, B. O'Donoghue, R. Bunel, R. Stanforth, S. Gowal, J. Uesato, G. Swirszcz, and P. Kohli <br />
-<i>Proceedings of the International Conference on Learning Representations (ICLR)</i>, 2019.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/1802.05666">Adversarial risk and the dangers of evaluating against weak attacks</a></dt>
-<dd><p>J. Uesato, B. O'Donoghue, A. van den Oord, and P. Kohli <br />
-<i>Proceedings of the International Conference on Machine Learning (ICML)</i>, pp. 5025-5034, 2018.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/1709.05380">The uncertainty Bellman equation and exploration</a></dt>
-<dd><p>B. O'Donoghue, I. Osband, R. Munos, and V. Mnih <br />
-<b>Oral</b> <i>Proceedings of the International Conference on Machine Learning (ICML)</i>, pp. 3836-3845. 2018.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/1611.01626">Combining policy gradient and Q-learning</a></dt>
-<dd><p>B. O'Donoghue, R. Munos, K. Kavukcuoglu, and V. Mnih <br />
-<i>Proceedings of the International Conference on Learning Representations (ICLR)</i>, 2017.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.stanford.edu/~boyd/papers/it_avf.html">Iterated approximate value functions</a></dt>
-<dd><p>B. O'Donoghue, Y. Wang, and S. Boyd <br />
-<i>Proceedings European Control Conference</i>, pp. 3882-3888, Zurich, July 2013.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.stanford.edu/~boyd/papers/min_max_adp.html">Min-max approximate dynamic programming</a></dt>
-<dd><p>B. O'Donoghue, Y. Wang, and S. Boyd <br />
-<i>Proceedings IEEE Multi-Conference on Systems and Control</i>, pp. 424-431, September 2011.</p></dd>
-</dl>
-<h2>Other</h2>
-<dl>
-<dt><a href="https://arxiv.org/abs/2507.06261">Gemini 2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and next generation agentic capabilities</a></dt>
-<dd><p>Gemini Team <br />
-Tech report, 2025.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/2210.12160">On the connection between Bregman divergence and value in regularized Markov decision processes</a></dt>
-<dd><p>B. O'Donoghue <br />
-Technical note, 2022.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/2012.13349">Solving mixed integer programs using neural networks</a></dt>
-<dd><p>V. Nair*, S. Bartunov*, F. Gimeno*, I. von Glehn*, P. Lichocki*, I. Lobov*, B. O'Donoghue*, N. Sonnerat*, C. Tjandraatmadja*, P. Wang*, <i>et al.</i> <br />
-(* Equal contribution). In submission, 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/pdf/2106.00669.pdf">Discovering diverse nearly optimal policies with successor features</a></dt>
-<dd><p>T. Zahavy, B. O'Donoghue, A. Barreto, V. Mnih, S. Flennerhag, and S. Singh <br />
-Working draft, 2021.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/1811.09300">Strength in numbers: Trading-off robustness and computation via adversarially-trained ensembles</a></dt>
-<dd><p>E. Grefenstette, R. Stanforth, B. O'Donoghue, J. Uesato, G. Swirszcz, and P. Kohli <br />
-Working draft, 2018.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/1809.05042">Hamiltonian descent methods</a></dt>
-<dd><p>C. J. Maddison, D. Paulin, Y. W. Teh, B. O'Donoghue, and A. Doucet <br />
-Working draft, 2018.</p></dd>
-</dl>
-<dl>
-<dt><a href="https://arxiv.org/abs/1805.10265">Training verified learners with learned verifiers</a></dt>
-<dd><p>K. (Dj) Dvijotham, S. Gowal, R. Stanforth, R. Arandjelovic, B. O'Donoghue, J. Uesato, and P. Kohli <br />
-Working draft, 2018.</p></dd>
-</dl>
-<dl>
-<dt><a href="http://www.stanford.edu/~boyd/papers/pdos.html">A primal-dual operator splitting method for conic optimization</a></dt>
-<dd><p>E. Chu, B. O'Donoghue, N. Parikh, and S. Boyd <br />
-<i>Stanford internal report</i>, (2013).</p></dd>
-</dl>
-<h2>Ph.D. Thesis</h2>
-<dl>
-<dt><a href="thesis/bod_thesis.pdf">Suboptimal control policies via convex optimization</a></dt>
-<dd><p>B. O'Donoghue</p></dd>
-</dl>
-<div id="footer">
-<div id="footer-text">
-Page generated 2026-03-30 17:44:05 BST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
-(<a href="index.jemdoc">source</a>)
-</div>
-</div>
-</div>
+
+<footer>
+  <div class="container">
+    &copy; <span id="year"></span> Brendan O'Donoghue &middot;
+    <a href="mailto:bodonoghue85@gmail.com">Email</a> &middot;
+    <a href="https://scholar.google.com/citations?user=0Pzjj-cAAAAJ">Scholar</a> &middot;
+    <a href="https://github.com/bodono">GitHub</a>
+  </div>
+</footer>
+
+<script>
+  // Theme toggle
+  var toggle = document.getElementById("theme-toggle");
+  toggle.addEventListener("click", function () {
+    var cur = document.documentElement.getAttribute("data-theme");
+    var next = cur === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
