@@ -32,7 +32,7 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Upload site
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           # The site is a plain static page served from the repo root
           path: .
