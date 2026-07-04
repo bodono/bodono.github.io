@@ -206,6 +206,33 @@ section h2 {
 .bio p:last-child { margin-bottom: 0; }
 #about { border-top: 0; padding-top: 12px; }
 
+/* Press mentions */
+.press {
+  margin: 22px 0;
+  padding: 14px 18px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.press p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--text-faint);
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.press p:last-child { margin-bottom: 0; }
+.press a { font-weight: 500; }
+.press-label {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+
 /* Chips */
 .chips { display: flex; flex-wrap: wrap; gap: 9px; padding: 0; margin: 0; list-style: none; }
 .chips li {
