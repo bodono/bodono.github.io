@@ -15,6 +15,15 @@ ROOT = Path(__file__).resolve().parents[1]
 HTML_ENTRYPOINT = ROOT / "index.html"
 SKIP_SCHEMES = {"data", "http", "https", "javascript", "mailto", "tel"}
 CSS_URL_RE = re.compile(r"url\(([^)]+)\)")
+UMAMI_SCRIPT_URL = "https://cloud.umami.is/script.js"
+UMAMI_WEBSITE_ID = "29f3bde0-f7b6-4a4b-8e43-43cb99121aa1"
+UMAMI_ATTRIBUTES = {
+    "data-domains": "bodono.github.io",
+    "data-tag": "personal-site",
+    "data-exclude-search": "true",
+    "data-exclude-hash": "true",
+    "data-do-not-track": "true",
+}
 
 
 @dataclass(frozen=True)
@@ -32,9 +41,12 @@ class SiteParser(HTMLParser):
         self.anchors: set[str] = set()
         self.references: list[Reference] = []
         self.errors: list[str] = []
+        self.umami_trackers: list[dict[str, str]] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        attrs_dict = {name.lower(): value for name, value in attrs if value is not None}
+        attrs_dict = {
+            name.lower(): "" if value is None else value for name, value in attrs
+        }
         for anchor_attr in ("id", "name"):
             if anchor := attrs_dict.get(anchor_attr):
                 self.anchors.add(anchor)
@@ -54,6 +66,9 @@ class SiteParser(HTMLParser):
             self.errors.append(
                 f"{self.source.relative_to(ROOT)}:{line}: img is missing alt text"
             )
+
+        if tag == "script" and attrs_dict.get("src") == UMAMI_SCRIPT_URL:
+            self.umami_trackers.append(attrs_dict)
 
 
 def parse_html(path: Path) -> SiteParser:
@@ -132,9 +147,30 @@ def iter_css_references(css_file: Path) -> list[Reference]:
     return references
 
 
+def validate_analytics(parser: SiteParser) -> list[str]:
+    if len(parser.umami_trackers) != 1:
+        return [
+            "index.html: expected exactly one Umami tracker, found "
+            f"{len(parser.umami_trackers)}"
+        ]
+
+    tracker = parser.umami_trackers[0]
+    expected = {"data-website-id": UMAMI_WEBSITE_ID, **UMAMI_ATTRIBUTES}
+    errors: list[str] = []
+    if "defer" not in tracker:
+        errors.append("index.html: Umami tracker must use defer")
+    for attribute, value in expected.items():
+        if tracker.get(attribute) != value:
+            errors.append(
+                f"index.html: Umami tracker must set {attribute}={value!r}"
+            )
+    return errors
+
+
 def main() -> int:
     html_cache = {HTML_ENTRYPOINT: parse_html(HTML_ENTRYPOINT)}
     errors: list[str] = []
+    errors.extend(validate_analytics(html_cache[HTML_ENTRYPOINT]))
 
     for parser in list(html_cache.values()):
         errors.extend(parser.errors)
